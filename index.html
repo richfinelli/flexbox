@@ -3,8 +3,88 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Flexbox</title>
+	<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			background: #efefef;
+			font-size: 100%;
+			font-family: 'Droid Sans', Arial, sans-serif;
+			line-height: 1.5;
+		}
+		header {
+			padding: 40px;
+		}
+		h1 {
+			text-align: center;
+			font-size: 4rem;
+			color: hotpink;
+		}
+		p { font-size: .75rem }
+		.tile-container {
+			width: 80%;
+			margin: 0 auto;
+			/*border: 1px solid hotpink;*/
+		}
+		.tile {
+			float: left;
+			width: 200px;
+			height: 300px;
+			background: #fff;	
+			margin-left: 10px;	
+			margin-bottom: 10px;
+		}
+		.tile figure {
+			height: 100px;
+			background: #aaa;
+			font-size: 2rem;
+			text-align: center;
+		}
+		.tile-body h2 {
+			margin-bottom: 10px;
+		}
+		.tile-body {
+			padding: 10px;
+		}
+	</style>
 </head>
 <body>
-	
+	<header>
+		<h1>Flexbox!</h1>
+	</header>
+	<main class="tile-container">
+		<div class="tile">
+			<figure>1</figure>
+			<div class="tile-body">
+				<h2>Flex item</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, optio?</p>
+			</div>
+		</div>
+		<div class="tile">
+			<figure>2</figure>
+			<div class="tile-body">
+				<h2>Flex item</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, optio? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, officia!</p>
+			</div>
+		</div>
+		<div class="tile">
+			<figure>3</figure>
+			<div class="tile-body">
+				<h2>Flex item</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, optio? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam adipisci tempora, assumenda ea aliquam ex?</p>
+			</div>
+		</div>
+		<div class="tile">
+			<figure>4</figure>
+			<div class="tile-body">
+				<h2>Flex item</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, optio?</p>
+			</div>
+		</div>
+
+	</main>
 </body>
 </html>
