@@ -27,27 +27,38 @@
 		.tile-container {
 			width: 80%;
 			margin: 0 auto;
-			/*border: 1px solid hotpink;*/
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
 		}
 		.tile {
-			float: left;
-			width: 200px;
-			height: 300px;
+			width: 190px;
 			background: #fff;	
-			margin-left: 10px;	
 			margin-bottom: 10px;
 		}
 		.tile figure {
 			height: 100px;
 			background: #aaa;
 			font-size: 2rem;
-			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 		.tile-body h2 {
 			margin-bottom: 10px;
 		}
 		.tile-body {
-			padding: 10px;
+			padding: 10px 10px 25px 10px;
+			min-height: 200px;
+		}
+		@media all and (max-width: 700px) {
+			.tile-container {
+				flex-direction: column;
+				flex-grow: 1;
+			}
+			.tile {
+				width: auto;
+			}
 		}
 	</style>
 </head>
@@ -59,32 +70,88 @@
 		<div class="tile">
 			<figure>1</figure>
 			<div class="tile-body">
-				<h2>Flex item</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, optio?</p>
+				<h2>Retirement</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
 			</div>
 		</div>
 		<div class="tile">
 			<figure>2</figure>
 			<div class="tile-body">
-				<h2>Flex item</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, optio? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, officia!</p>
+				<h2>Home addition</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dolorum laborum, optio?</p>
 			</div>
 		</div>
 		<div class="tile">
 			<figure>3</figure>
 			<div class="tile-body">
-				<h2>Flex item</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, optio? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam adipisci tempora, assumenda ea aliquam ex?</p>
+				<h2>Leisure</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati id in praesentium!</p>
 			</div>
 		</div>
 		<div class="tile">
 			<figure>4</figure>
 			<div class="tile-body">
-				<h2>Flex item</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, optio?</p>
+				<h2>Education</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla beatae, sequi unde!</p>
 			</div>
 		</div>
-
+		<div class="tile">
+			<figure>5</figure>
+			<div class="tile-body">
+				<h2>Travel</h2>
+				<p>Lorem ipsum dolor sit amet. Ducimus quam nostrum cupiditate!</p>
+			</div>
+		</div>
+		<div class="tile">
+			<figure>6</figure>
+			<div class="tile-body">
+				<h2>Career</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elite.</p>
+			</div>
+		</div>
 	</main>
+
+	<script src="jquery-3.1.1.min.js"></script>
+	<script src="handlebars-v4.0.5.js"></script>
+	<script>
+		
+
+		var tiles = [
+			{
+				"number": 1,
+				"name": "Retirement",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, dolorum?"
+			},
+			{
+				"number": 2,
+				"name": "Home addition",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque rem minima nisi!",
+				"status": "dayTrader"
+			},
+			{
+				"number": 3,
+				"name": "Leisure",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque rem minima nisi!"
+			},
+			{
+				"number": 4,
+				"name": "Education",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque rem minima nisi!"
+			},
+			{
+				"number": 5,
+				"name": "Travel",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque rem minima nisi!"
+			},
+			{
+				"number": 6,
+				"name": "Career",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque rem minima nisi!"
+			}
+		]
+		$(document).ready(function() {
+			
+		});
+	</script>
 </body>
 </html>
